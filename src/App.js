@@ -8,10 +8,7 @@ import Playlist from './Components/playlist';
 import PlayerControls from './Components/playercontrol';
 
 
-// Inside index.js or App.js
-<BrowserRouter basename={process.env.PUBLIC_URL}>
-  <App />
-</BrowserRouter>
+
 
 
 
