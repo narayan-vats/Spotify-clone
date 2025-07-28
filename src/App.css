@@ -13,18 +13,20 @@
 }
 
 .B{
-  margin-left: 250px;
+  margin-left: 20%;
   color: green;
 }
 
 .C{
-  margin-left: 250px;
-  margin-top: 30px;
+  margin-left: auto;
+  
+  margin-top: 2%;
 }
 
 .D{
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: auto;
+  margin-top: 3%;
+  margin-right:auto;
   
 }
 
