@@ -33,7 +33,7 @@ const playlists = [
   return (
     <div className="App">
       <header className="App-header">
-        <img src={myPhoto} alt='logo'  width="100px " height="100"   className='a'/>
+        <img src={myPhoto} alt='logo'  width="100px " height="100px"   className='a'/>
 
         <h1  className='B'>WELCOME TO SPOTIFY</h1>
 
