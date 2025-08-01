@@ -1,12 +1,15 @@
+/* === Base Styles === */
+
 .App-header {
   background-color: #282c34;
-  height: auto;
+  padding: 15px;
   display: flex;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  flex-wrap: wrap; /* For smaller screens */
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 .a {
@@ -14,25 +17,23 @@
 }
 
 .B {
-  margin-left: 20%;
   color: green;
+  margin-left: 20px;
 }
 
 .C {
   margin-left: auto;
-  margin-top: 2%;
+  margin-top: 10px;
 }
 
 .D {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
+  margin: 20px auto 0 auto;
 }
 
 .spotify-clone {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #121212;
   color: white;
 }
@@ -40,13 +41,13 @@
 .main-content {
   display: flex;
   flex: 1;
+  flex-direction: row;
 }
 
 .sidebar {
   width: 250px;
   background-color: #000;
   padding: 20px;
-  height: calc(100vh - 80px);
   overflow-y: auto;
 }
 
@@ -64,7 +65,6 @@
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  height: calc(100vh - 80px);
 }
 
 .track-card {
@@ -91,12 +91,11 @@
 }
 
 .player-controls {
-  height: 80px;
   background-color: #282828;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 15px;
   flex-wrap: wrap;
 }
 
@@ -118,19 +117,17 @@
   color: white;
   margin: 0 10px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .progress-bar {
   width: 200px;
+  height: 6px;
+  background: #555;
+  border-radius: 5px;
 }
 
-.playlist-header {
-  color: red;
-}
-
-/* ================== Responsive ================== */
-
-/* For tablets (<=768px) */
+/* === Tablet (max-width: 768px) === */
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;
@@ -139,33 +136,35 @@
   .sidebar {
     width: 100%;
     height: auto;
+    order: 1;
   }
 
   .playlist {
-    height: auto;
+    width: 100%;
+    order: 2;
   }
 
   .player-controls {
     flex-direction: column;
-    height: auto;
-    padding: 10px;
+    align-items: flex-start;
     gap: 10px;
   }
 
   .progress-bar {
     width: 100%;
-    margin-top: 10px;
   }
 
   .App-header {
-    font-size: 16px;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    font-size: 18px;
+  }
+
+  .C, .D {
+    margin: 10px auto;
   }
 }
 
-/* For mobile devices (<=480px) */
+/* === Mobile (max-width: 480px) === */
 @media (max-width: 480px) {
   .track-card {
     flex-direction: column;
@@ -177,39 +176,29 @@
     align-items: flex-start;
   }
 
-  .track-cover,
-  .now-playing-cover {
+  .track-cover, .now-playing-cover {
     width: 40px;
     height: 40px;
   }
 
   .player-buttons button {
     margin: 5px;
-  }
-
-  .progress-bar {
-    width: 100%;
-  }
-
-  .sidebar {
-    padding: 10px;
-  }
-
-  .playlist {
-    padding: 10px;
+    font-size: 16px;
   }
 
   .App-header {
-    padding: 5px;
+    font-size: 16px;
+    padding: 10px;
   }
 
-  .B,
-  .C,
-  .D {
+  .sidebar, .playlist {
+    padding: 10px;
+  }
+
+  .B {
     margin-left: 0;
-    margin-top: 10px;
-    text-align: center;
   }
 }
+
 
 
