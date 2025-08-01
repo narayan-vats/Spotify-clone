@@ -1,35 +1,33 @@
-
-
 .App-header {
   background-color: #282c34;
   height: auto;
-  display: flex; 
+  display: flex;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex-wrap: wrap; /* For smaller screens */
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.a{
+.a {
   margin: 10px;
 }
 
-.B{
+.B {
   margin-left: 20%;
   color: green;
 }
 
-.C{
+.C {
   margin-left: auto;
-  
   margin-top: 2%;
 }
 
-.D{
+.D {
   margin-left: auto;
+  margin-right: auto;
   margin-top: 3%;
-  margin-right:auto;
-  
 }
-
 
 .spotify-clone {
   display: flex;
@@ -66,8 +64,7 @@
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  
-  height: calc(100vh - 80px); /* Subtract player controls height */
+  height: calc(100vh - 80px);
 }
 
 .track-card {
@@ -78,11 +75,13 @@
   margin: 10px 0;
   background-color: #181818;
   border-radius: 5px;
+  flex-wrap: wrap;
 }
 
 .track-info {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .track-cover {
@@ -98,12 +97,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  
+  flex-wrap: wrap;
 }
 
 .now-playing {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .now-playing-cover {
@@ -124,15 +124,92 @@
   width: 200px;
 }
 
-.playlist-header{
+.playlist-header {
   color: red;
 }
 
+/* ================== Responsive ================== */
 
+/* For tablets (<=768px) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
 
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
 
+  .playlist {
+    height: auto;
+  }
 
+  .player-controls {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
 
+  .progress-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
 
+  .App-header {
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* For mobile devices (<=480px) */
+@media (max-width: 480px) {
+  .track-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track-cover,
+  .now-playing-cover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .player-buttons button {
+    margin: 5px;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .sidebar {
+    padding: 10px;
+  }
+
+  .playlist {
+    padding: 10px;
+  }
+
+  .App-header {
+    padding: 5px;
+  }
+
+  .B,
+  .C,
+  .D {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
 
 
